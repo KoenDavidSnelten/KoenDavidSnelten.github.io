@@ -97,7 +97,7 @@ nav li:first-child {
 
 h1 {
     font-size: 4rem;
-    margin-left: 36px;
+    text-align: center;
 }
 
 .packages {
@@ -148,7 +148,7 @@ h1 {
 }
 
 #bronze {
-    background: linear-gradient(to bottom, #8B4513, #CD7F32);
+    background: linear-gradient(to bottom, #D2691E, #CD7F32);
 }
 
 #silver {
