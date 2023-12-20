@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <title>SkyScan</title>
+    </head>
+    <body id="zero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#zero"><h3>SkyScan</h3></a></li>
+                    <li><a href="#two">Our Packages</a></li>
+                    <li><a href="#three">Our Work</a></li>
+                    <li><a href="#four">Get a Quotation</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="one">
+                <video autoplay muted loop id="myVideo1" class="back-video">
+                    <source src="videos/LidarBridgeScan2.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section id="two">
+                <h1>Our Packages</h1>
+                <div class="packages">
+                    <div class="package-card" id="bronze">
+                        <!-- <img src="bronze-package-image.jpg" alt="Bronze Package"> -->
+                        <h2>Bronze Package</h2>
+                        <hr/>
+                        <p>Unlock the potential of 3D scans with our Bronze Package, providing you with high-quality scans of buildings and infrastructure. Take the first step towards visualizing your projects in stunning detail.</p>
+                        <button><a href="#four">Get a Quatation!</a></button>
+                    </div>
+                    <div class="package-card" id="silver">
+                        <!-- <img src="silver-package-image.jpg" alt="Silver Package"> -->
+                        <h2>Silver Package</h2>
+                        <hr/>
+                        <p>Elevate your projects with our Silver Package, transforming raw 3D scan data into actionable insights and valuable information. Seamlessly integrate technology into your decision-making process and turn scans into a powerful asset for your business.</p>
+                        <button><a href="#four">Get a Quatation!</a></button>
+                    </div>
+                    <div class="package-card" id="gold">
+                        <!-- <img src="gold-package-image.jpg" alt="Gold Package"> -->
+                        <h2>Gold Package</h2>
+                        <hr/>
+                        <p>Experience the pinnacle of expertise with our Gold Package, combining 3D scans, insightful data analysis, and a professional opinion. Benefit from the knowledge of seasoned professionals to make informed decisions and bring your vision to life with confidence</p>
+                        <button><a href="#four">Get a Quatation!</a></button>
+                    </div>
+                </div>
+            </section>
+            <hr/>
+            <section id="three">
+                <h1>Our Work</h1>
+                <div class="textpart">
+                    <p>At SkyScan, we specialize in capturing the essence of architectural marvels through the lens of cutting-edge technology. Leveraging state-of-the-art 3D scanning technology, we meticulously scan and immortalize bridges and buildings, transforming them into detailed, immersive digital representations.</p>
+                    <h3>Precision in Every Pixel</h3>
+                    <p>Our skilled team of experts utilizes advanced scanning equipment to capture intricate details, ensuring accuracy and precision in every pixel. From the towering structures of bridges to the intricate facades of buildings, we go beyond traditional photography, providing you with a comprehensive 3D experience.</p>
+                    <h3>Unveiling Hidden Dimensions</h3>
+                    <p>Embark on a journey beyond the surface as we unveil hidden dimensions and nuances of architectural wonders. Our 3D scans not only document the present but also serve as valuable references for future renovations and enhancements.</p>
+                    <h3>Innovation in Visualization</h3>
+                    <p>
+                        SkyScan pioneers innovation in visualization, offering clients and stakeholders an unparalleled insight into the structural integrity and aesthetics of their projects. Whether it's a historical landmark, a contemporary skyscraper, or an iconic bridge, our 3D scans bring architecture to life in a way that static images simply cannot match.
+                    
+                        Join us in exploring the intricate tapestry of the built environment as we redefine the boundaries of architectural visualization through the lens of SkyScan.
+                    </p>
+                </div>
+            </section>
+            <hr/>
+            <section id="four">
+                <h1>Get a Quatation</h1>
+                <form class="contact-form">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+            
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+            
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="type">Individiual or Company:</label>
+                    <select id="type" name="type" required>
+                        <option value="individual">Individual</option>
+                        <option value="company">Company</option>
+                    </select>
+            
+                    <label for="companyName" id="companyNameLabel" style="display: none;">Company Name:</label>
+                    <input type="text" id="companyName" name="companyName" style="display: none;">
+            
+                    <label for="package">Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="undecided">Don't Know Yet</option>
+                    </select>
+            
+                    <label for="message">What do you need scanned?</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            
+                <script>
+                    document.getElementById('type').addEventListener('change', function () {
+                        var companyNameLabel = document.getElementById('companyNameLabel');
+                        var companyNameInput = document.getElementById('companyName');
+            
+                        if (this.value === 'company') {
+                            companyNameLabel.style.display = 'block';
+                            companyNameInput.style.display = 'block';
+                            companyNameInput.setAttribute('required', 'required');
+                        } else {
+                            companyNameLabel.style.display = 'none';
+                            companyNameInput.style.display = 'none';
+                            companyNameInput.removeAttribute('required');
+                        }
+                    });
+                </script>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
